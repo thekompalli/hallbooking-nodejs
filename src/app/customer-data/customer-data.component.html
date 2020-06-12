@@ -1,0 +1,13 @@
+<div class="container p-4 text-center">
+    <h1 class="mb-4">Customer Data</h1>
+    <table class="table table-striped" >
+        <thead>
+           <th *ngFor = "let i of tHeads">{{i}}</th>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let i of customerData">
+                <td *ngFor = "let j of tData">{{i[j]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

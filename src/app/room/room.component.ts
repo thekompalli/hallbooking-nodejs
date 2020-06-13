@@ -23,7 +23,7 @@ export class RoomComponent implements OnInit {
       endTime: ['', Validators.required],
     })
 
-    this.http.get('http://localhost:3000/room')
+    this.http.get('https://hallbooking-nodejs.herokuapp.com/room')
     .subscribe((item) => {
       console.log(item["message"])
     })
@@ -32,7 +32,7 @@ export class RoomComponent implements OnInit {
   onSubmit(){
     this.router.navigate(["/customer-data"])
     console.log(this.bookingForm.value)
-    this.http.post('http://localhost:3000/room', this.bookingForm.value)
+    this.http.post('https://hallbooking-nodejs.herokuapp.com/room', this.bookingForm.value)
     .subscribe((respData) => {
       console.log(respData)
     })
@@ -40,7 +40,7 @@ export class RoomComponent implements OnInit {
   }
 
   getData(){
-    this.http.get('http://localhost:3000/customerData')
+    this.http.get('https://hallbooking-nodejs.herokuapp.com/customerData')
     .subscribe((respData) => {
       console.log(respData)
     })

@@ -14,7 +14,7 @@ export class CustomerDataComponent implements OnInit {
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get<any>('http://localhost:3000/customerData')
+    this.http.get<any>('https://hallbooking-nodejs.herokuapp.com/customerData')
     .subscribe((respData) => {
       this.customerData = respData
     })

@@ -15,7 +15,7 @@ export class HallDetailsComponent implements OnInit {
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get<any>('http://localhost:3000/bookedData')
+    this.http.get<any>('https://hallbooking-nodejs.herokuapp.com/bookedData')
     .subscribe((respData) => {
       this.hallData = respData
     })
